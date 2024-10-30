@@ -1,0 +1,19 @@
+Database Accounts
+
+
+Admin 
+
+Username:admin
+Password:user
+
+Teacher
+
+Username:teacher1
+Password:teacher1
+
+
+Student
+
+Username:student1	
+Password:student1
+
