@@ -1,0 +1,89 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05 5, 24, 11:45:31 PM
+    Author     : admin
+*/
+.exit{
+    -fx-background-color:transparent;
+    -fx-font-size:20px;
+    -fx-cursor:hand;
+}
+.exit:hover{
+     -fx-background-color:#c51f32;
+    -fx-cursor:hand;
+}
+.left-form{
+    -fx-background-color:transparent;
+    -fx-border-color:#000;
+    -fx-border-width:.4px 4px .4px .4px;
+}
+.right-form{
+    -fx-background-color:#fff;
+    -fx-border-color:#000;
+    -fx-border-width:.4px .4px .4px 1px;
+}
+.close{
+    -fx-background-color:transparent;
+    -fx-cursor:hand;
+}
+.close:hover{
+    -fx-background-color:#fb3d63;
+}
+.textfield{
+    -fx-background-color:linear-gradient(to bottom, #efefef, #eee);
+    -fx-background-radius:5px;
+    -fx-border-color:#000;
+    -fx-border-width:.2px;
+    -fx-border-radius:5px;
+    -fx-font-size:16px;
+    -fx-font-family:"Tahoma";
+    -fx-padding: 0px 0px 0px 35px; 
+}
+.textfield:focused{
+    -fx-background-color:#fff;
+    -fx-border-color:linear-gradient(to bottom right, #2d658c, #2ca772);
+    -fx-border-width:.8px;
+}
+.login-btn{
+    -fx-background-color:linear-gradient(to bottom, #088694, #0daab9);
+    -fx-background-radius:4px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+}
+.login-btn:hover{
+    -fx-background-color:linear-gradient(to bottom, #277bd0, #1d6fa4);
+}
+
+.register-btn{
+    -fx-background-color:linear-gradient(to bottom, #1cd06d, #0da150);
+    -fx-background-radius:4px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+    -fx-alignment: CENTER;
+}
+.register-btn:hover{
+    -fx-background-color:linear-gradient(to bottom, #277bd0, #1d6fa4);
+}
+
+.done-btn{
+    -fx-background-color:linear-gradient(to bottom, #2968a7, #14405d);
+    -fx-background-radius:4px;
+    -fx-cursor:hand;
+    -fx-text-fill:#fff;
+    -fx-font-size:14px;
+    -fx-font-family:"Arial";
+}
+.done-btn:hover{
+    -fx-background-color:linear-gradient(to bottom, #277bd0, #1d6fa4);
+}
+bg-panel{
+    -fx-background-color:transparent;
+}

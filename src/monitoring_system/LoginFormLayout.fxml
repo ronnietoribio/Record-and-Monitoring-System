@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1200.0" prefWidth="2000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monitoring_system.FXMLDocumentController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane prefHeight="601.0" prefWidth="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <BorderPane prefHeight="601.0" prefWidth="1080.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <center>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="1225.0" fitWidth="2408.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Background1.jpg" />
+                                 </image>
+                              </ImageView>
+                              <AnchorPane layoutX="848.0" layoutY="398.0" prefHeight="503.0" prefWidth="677.0" styleClass="left-form" stylesheets="@loginDesign.css">
+                                 <children>
+                                    <AnchorPane layoutX="-2.0" layoutY="-5.0" prefHeight="518.0" prefWidth="671.0" stylesheets="@AdminDashboardDesign.css">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <ImageView fitHeight="350.0" fitWidth="388.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../Logo.jpg" />
+                                             </image>
+                                          </ImageView>
+                                          <Label layoutX="94.0" layoutY="318.0" text="CAS Records" textFill="#063832">
+                                             <font>
+                                                <Font name="Goudy Old Style Bold" size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="155.0" layoutY="349.0" text="and" textFill="#063832">
+                                             <font>
+                                                <Font name="Goudy Old Style Italic" size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="63.0" layoutY="385.0" text="Monitoring System" textFill="#063832">
+                                             <font>
+                                                <Font name="Goudy Old Style Italic" size="35.0" />
+                                             </font>
+                                          </Label>
+                                          <Button fx:id="close1" layoutX="14.0" layoutY="460.0" mnemonicParsing="false" onAction="#close" prefHeight="22.0" prefWidth="132.0" styleClass="exit" stylesheets="@loginDesign.css" text="Exit">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                             <graphic>
+                                                <FontAwesomeIconView fill="#8a0b0b" glyphName="SIGN_OUT" size="2em" />
+                                             </graphic>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane id="Login_Panel" fx:id="login_form" blendMode="DARKEN" focusTraversable="true" prefHeight="405.0" prefWidth="301.0" stylesheets="@loginDesign.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="294.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="5.0">
+                                       <children>
+                                          <FontAwesomeIconView fill="#025b39" glyphName="USER" layoutX="143.0" layoutY="124.0" size="10em" text="" wrappingWidth="129.9999999999999" />
+                                          <TextField fx:id="username" layoutX="85.0" layoutY="195.0" onAction="#loginAccount" prefHeight="40.0" prefWidth="200.0" promptText="Username" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <PasswordField fx:id="password" layoutX="85.0" layoutY="250.0" onAction="#loginAccount" prefHeight="40.0" prefWidth="200.0" promptText="Password" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <Button fx:id="loginBtn" layoutX="85.0" layoutY="302.0" mnemonicParsing="false" onAction="#loginAccount" prefHeight="40.0" prefWidth="200.0" styleClass="login-btn" stylesheets="@loginDesign.css" text="Login" />
+                                          <Label layoutX="124.0" layoutY="133.0" text="Welcome!" textFill="#0bae42">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="25.0" />
+                                             </font>
+                                          </Label>
+                                          <Label alignment="CENTER" layoutX="58.0" layoutY="354.0" prefHeight="30.0" prefWidth="255.0" text=" Don't have an Account?" textAlignment="CENTER" />
+                                          <ComboBox fx:id="login_role" layoutX="85.0" layoutY="391.0" onAction="#switch_form" prefHeight="40.0" prefWidth="200.0" promptText="Choose Role" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <FontAwesomeIconView fill="#979494" glyphName="USER" layoutX="92.0" layoutY="221.0" size="20" />
+                                          <FontAwesomeIconView fill="#979494" glyphName="LOCK" layoutX="94.0" layoutY="276.0" size="20" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane id="Teacher_panel" fx:id="Teacher_form" blendMode="DARKEN" layoutX="322.0" layoutY="4.0" prefHeight="502.0" prefWidth="339.0" stylesheets="@loginDesign.css" visible="false">
+                                       <children>
+                                          <FontAwesomeIconView fill="#033c27" glyphName="USER_PLUS" layoutX="130.0" layoutY="92.0" size="7em" wrappingWidth="153.9999999999999" />
+                                          <Label layoutX="111.0" layoutY="106.0" text="Register Account" textFill="#0bae42">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="teacherRegister_fullname" layoutX="85.0" layoutY="150.0" onAction="#registerTeacher" prefHeight="40.0" prefWidth="200.0" promptText="Full Name" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <TextField fx:id="teacher_email" layoutX="85.0" layoutY="196.0" onAction="#registerTeacher" prefHeight="40.0" prefWidth="200.0" promptText="Email" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <TextField fx:id="teacher_username" layoutX="85.0" layoutY="243.0" onAction="#registerTeacher" prefHeight="40.0" prefWidth="200.0" promptText="Username" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <PasswordField fx:id="teacher_password" layoutX="85.0" layoutY="291.0" onAction="#registerTeacher" prefHeight="40.0" prefWidth="200.0" promptText="Password" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <PasswordField fx:id="teacher_confirm_password" layoutX="85.0" layoutY="338.0" onAction="#registerTeacher" prefHeight="40.0" prefWidth="200.0" promptText="Confirm Password" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <Button fx:id="teacher_register" layoutX="82.0" layoutY="387.0" mnemonicParsing="false" onAction="#registerTeacher" prefHeight="40.0" prefWidth="200.0" styleClass="register-btn" stylesheets="@loginDesign.css" text="Register" />
+                                          <FontAwesomeIconView glyphName="ENVELOPE" layoutX="89.0" layoutY="222.0" size="20" />
+                                          <FontAwesomeIconView glyphName="USER" layoutX="91.0" layoutY="270.0" size="20" />
+                                          <FontAwesomeIconView glyphName="LOCK" layoutX="92.0" layoutY="317.0" size="20" />
+                                          <FontAwesomeIconView glyphName="LOCK" layoutX="92.0" layoutY="364.0" size="20" />
+                                          <Label layoutX="38.0" layoutY="452.0" text="Already have an account?">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Hyperlink fx:id="teacher_hyperlink_login" layoutX="236.0" layoutY="448.0" onAction="#loginForm" text="Login here!">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font></Hyperlink>
+                                          <FontAwesomeIconView glyphName="USER" layoutX="89.0" layoutY="176.0" size="20" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane id="Student_Panel" fx:id="Student_form" blendMode="DARKEN" layoutX="311.0" layoutY="2.0" prefHeight="508.0" prefWidth="353.0" stylesheets="@loginDesign.css" visible="false">
+                                       <children>
+                                          <FontAwesomeIconView fill="#033c27" glyphName="USER_PLUS" layoutX="130.0" layoutY="103.0" size="7em" wrappingWidth="32.999999999999886" />
+                                          <Label layoutX="102.0" layoutY="117.0" text="Register Account" textFill="#0bae42">
+                                             <font>
+                                                <Font name="Century Gothic Bold" size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="studentRegister_fullname" layoutX="79.0" layoutY="162.0" onAction="#registerStudent" prefHeight="40.0" prefWidth="200.0" promptText="Full Name" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <TextField fx:id="student_email" layoutX="79.0" layoutY="212.0" onAction="#registerStudent" prefHeight="40.0" prefWidth="200.0" promptText="Email" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <TextField fx:id="student_username" layoutX="79.0" layoutY="261.0" onAction="#registerStudent" prefHeight="40.0" prefWidth="200.0" promptText="Username" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <PasswordField fx:id="student_password" layoutX="79.0" layoutY="310.0" onAction="#registerStudent" prefHeight="40.0" prefWidth="200.0" promptText="Password" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <PasswordField fx:id="student_confirm_password" layoutX="79.0" layoutY="359.0" onAction="#registerStudent" prefHeight="40.0" prefWidth="200.0" promptText="Confirm Password" styleClass="textfield" stylesheets="@loginDesign.css" />
+                                          <Button fx:id="student_register_btn" layoutX="79.0" layoutY="407.0" mnemonicParsing="false" onAction="#registerStudent" prefHeight="40.0" prefWidth="200.0" styleClass="register-btn" stylesheets="@loginDesign.css" text="Register" />
+                                          <FontAwesomeIconView glyphName="ENVELOPE" layoutX="87.0" layoutY="238.0" size="20" />
+                                          <FontAwesomeIconView glyphName="USER" layoutX="89.0" layoutY="287.0" size="20" />
+                                          <FontAwesomeIconView glyphName="LOCK" layoutX="91.0" layoutY="336.0" size="20" />
+                                          <FontAwesomeIconView glyphName="LOCK" layoutX="91.0" layoutY="385.0" size="20" />
+                                          <Label layoutX="40.0" layoutY="462.0" text="Already have an account?">
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </Label>
+                                          <Hyperlink fx:id="student_hyperlink_login" layoutX="227.0" layoutY="458.0" onAction="#loginForm" text="Login here!" />
+                                          <FontAwesomeIconView glyphName="USER" layoutX="89.0" layoutY="188.0" size="20" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                     </center>
+                  </BorderPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
